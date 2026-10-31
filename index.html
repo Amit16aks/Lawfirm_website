@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poddar & Associates | Advocates, Solicitors & Legal Consultants</title>
+  <meta name="description" content="Poddar & Associates (Est. 1969) is a premier full-service law firm in Ranchi, Jharkhand, representing clients in Supreme Court, High Courts, ITAT, NCLT, DRT and mining tribunals.">
+  <meta name="keywords" content="Law firm Ranchi, Poddar and Associates, Advocate General Jharkhand, Mining lawyer, Tax advocate ITAT, NCLT advocate Ranchi, High Court advocate">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Poddar & Associates | Premier Law Firm (Est. 1969)">
+  <meta property="og:description" content="Over five decades of judicial stewardship and courtroom advocacy across High Courts, Supreme Court, and National Tribunals.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#C5A059',
+              light: '#E0C78E',
+              dark: '#9A7B38',
+            },
+            navy: {
+              950: '#060B17',
+              900: '#0B1426',
+              800: '#101E38',
+              700: '#182C50',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Poddar & Associates",
+    "description": "Full-service premier law firm established in 1969 in Ranchi, Jharkhand.",
+    "telephone": "+91-9525600001",
+    "email": "chambers@poddarandassociates.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Poddar Chambers, Court Road",
+      "addressLocality": "Ranchi",
+      "addressRegion": "Jharkhand",
+      "postalCode": "834001",
+      "addressCountry": "IN"
+    },
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Binod Poddar",
+        "jobTitle": "Senior Advocate, Former Advocate General State of Jharkhand"
+      },
+      {
+        "@type": "Person",
+        "name": "Biren Poddar",
+        "jobTitle": "Senior Advocate"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-gold selection:text-navy-950" data-page="home">
+
+  <!-- =========================================================================
+       1. MANDATORY BAR COUNCIL OF INDIA (BCI) DISCLAIMER MODAL
+       ========================================================================= -->
+  <div id="bciModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="modal-content luxury-card max-w-2xl w-full rounded-2xl p-6 sm:p-9 border-2 border-gold/40 shadow-2xl relative">
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-navy-900 border border-gold/40 flex items-center justify-center text-gold shadow-lg">
+          <i data-lucide="scale" class="w-8 h-8"></i>
+        </div>
+        <span id="bciModalSubtitle" class="text-xs font-semibold uppercase tracking-widest text-gold px-3 py-1 rounded bg-navy-950 border border-gold/30">
+          Statutory Compliance Notice
+        </span>
+        <h2 id="bciModalTitle" class="font-cinzel text-2xl sm:text-3xl font-bold text-white mt-3">Bar Council of India Disclaimer</h2>
+      </div>
+
+      <div id="bciModalBody" class="text-slate-300 text-xs sm:text-sm leading-relaxed space-y-3.5 max-h-[48vh] overflow-y-auto pr-2 border-y border-slate-800/80 py-4 font-light text-justify">
+        <p>
+          As per the norms set by the Bar Council of India, law firms are not authorized to solicit work and publicize. All the information, publications and legal commentary provided on <span class="text-gold font-mono">www.poddarandassociates.com</span> is for illustrative purposes only and should not be regarded or relied upon as legal advice. While the content provided is accurate as at the date of first publication, it is updated frequently when laws and regulations change.
+        </p>
+        <p>
+          The site clearly states it is not intended to be a source of advertising or solicitation, nor is it an invitation for a lawyer-client relationship, and transmission, receipt or use of the site does not constitute or create a lawyer-client relationship.
+        </p>
+        <p>
+          By clicking the “I Agree” button and retrieving information from the website, the user accepts that he/she is doing it out of free will and any reliance on the information contained on <span class="text-gold font-mono">www.poddarandassociates.com</span> is solely at the user's own risk. Specific legal advice should always be obtained before acting upon any information or commentary provided on the site. Further, the recipients of content from the site should not act, or refrain from acting, based upon any or all of the contents on the site.
+        </p>
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row items-center justify-end gap-3.5">
+        <button id="bciDeclineBtn" class="w-full sm:w-auto px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider font-semibold text-slate-400 hover:text-white border border-slate-700 hover:border-slate-500 transition-colors">
+          Decline & Exit
+        </button>
+        <button id="bciAcceptBtn" class="w-full sm:w-auto gold-gradient-bg text-navy-950 px-7 py-2.5 rounded-lg text-xs uppercase tracking-wider font-bold shadow-lg hover:brightness-110 transition-all flex items-center justify-center">
+          <i data-lucide="check" class="w-4 h-4 mr-1.5"></i>
+          I Agree
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. TOP PRESTIGE BAR
+       ========================================================================= -->
+  <header class="border-b border-gold/15 bg-navy-950/95 sticky top-0 z-40 backdrop-blur-md">
+    <!-- Super Top Contact Ribbon -->
+    <div class="hidden lg:block border-b border-slate-800/60 text-xs py-2 px-6 text-slate-400 font-mono">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="flex items-center space-x-6">
+          <span class="header-reg-notice flex items-center text-slate-300">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold mr-1.5"></i>
+            Bar Council Regd. | Chambers Established 1969
+          </span>
+          <span class="header-courts-notice flex items-center">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold mr-1.5"></i>
+            High Court of Jharkhand & Supreme Court of India
+          </span>
+        </div>
+        <div class="flex items-center space-x-5">
+          <a href="tel:9525600001" class="firm-phone-primary hover:text-gold transition-colors flex items-center">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-gold mr-1.5"></i> +91 95256 00001
+          </a>
+          <span class="text-slate-700">|</span>
+          <a href="mailto:chambers@poddarandassociates.com" class="firm-email-general hover:text-gold transition-colors flex items-center">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-gold mr-1.5"></i> chambers@poddarandassociates.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <!-- Logo Branding -->
+      <a href="index.html" class="flex items-center space-x-3.5 group">
+        <div class="firm-short-name w-12 h-12 rounded-xl bg-navy-900 border-2 border-gold flex items-center justify-center font-cinzel text-xl font-black text-gold shadow-md group-hover:border-gold-light transition-colors">
+          P&A
+        </div>
+        <div>
+          <span class="firm-name font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-white block">
+            PODDAR <span class="text-gold">&</span> ASSOCIATES
+          </span>
+          <span class="firm-designation text-[10px] tracking-widest uppercase font-semibold text-slate-400 block -mt-1 font-mono">
+            Advocates & Legal Consultants • Estd. 1969
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden xl:flex items-center space-x-8 text-sm font-medium">
+        <a href="index.html" class="text-gold font-semibold">Home</a>
+        <a href="about.html" class="text-slate-300 hover:text-gold transition-colors">Firm Legacy</a>
+        <a href="practices.html" class="text-slate-300 hover:text-gold transition-colors">Practice Areas</a>
+        <a href="team.html" class="text-slate-300 hover:text-gold transition-colors">Legal Bench</a>
+        <a href="#sectors" class="text-slate-300 hover:text-gold transition-colors">Sectors</a>
+        <a href="#insights" class="text-slate-300 hover:text-gold transition-colors">Insights</a>
+        <a href="contact.html" class="text-slate-300 hover:text-gold transition-colors">Chambers</a>
+      </div>
+
+      <!-- Action Button & Theme Switcher -->
+      <div class="flex items-center space-x-3">
+        <button id="themeToggleBtn" class="w-9 h-9 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-gold bg-navy-800 flex items-center justify-center transition-colors shadow-sm" title="Toggle Light / Dark Mode">
+          <i data-lucide="moon" class="w-4 h-4 text-slate-700"></i>
+        </button>
+
+        <a href="contact.html#consultation" class="hidden md:flex gold-gradient-bg text-navy-950 font-bold px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-md items-center">
+          <i data-lucide="shield" class="w-4 h-4 mr-1.5"></i>
+          Case Assessment
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-lg bg-navy-900 border border-gold/30 text-gold" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileNav" class="xl:hidden hidden border-t border-slate-800 bg-navy-900/98 px-6 py-5 space-y-4">
+      <a href="index.html" class="mobile-nav-link block text-sm font-medium text-gold">Home</a>
+      <a href="about.html" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Firm Legacy</a>
+      <a href="practices.html" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Practice Areas</a>
+      <a href="team.html" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Legal Bench</a>
+      <a href="#sectors" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Sectors Advised</a>
+      <a href="#insights" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Legal Insights</a>
+      <a href="contact.html" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Chambers & Locations</a>
+      <a href="contact.html#consultation" class="mobile-nav-link block text-center gold-gradient-bg text-navy-950 font-bold py-2.5 rounded-lg text-xs uppercase tracking-wider">
+        Confidential Case Assessment
+      </a>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. HERO SECTION
+       ========================================================================= -->
+  <section id="heroSection" class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden border-b border-slate-800">
+    <!-- Hero Media Background Carousel (Infinite Loop - Photos & Videos) -->
+    <div id="heroCarouselBg">
+      <div id="heroSlidesTrack" class="w-full h-full relative">
+        <!-- Injected dynamically via main.js from data.js -->
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Subtle Background Ambient Glow -->
+    <div class="absolute -top-40 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none z-10"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-900/15 rounded-full blur-3xl pointer-events-none z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-20">
+      <div class="max-w-3xl">
+        <!-- Prestige Badge -->
+        <div id="heroPrestigeBadge" class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-navy-900/80 border border-gold/40 mb-6 shimmer-badge backdrop-blur-sm">
+          <i data-lucide="award" class="w-4 h-4 text-gold"></i>
+          <span class="text-xs uppercase tracking-widest font-semibold text-gold-light">
+            Founded in 1969 • Over 5 Decades of Distinction
+          </span>
+        </div>
+
+        <h1 id="heroHeadline" class="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 hero-title-shadow">
+          Judicial Stewardship. <br>
+          <span class="text-gold-gradient">Forensic Advocacy.</span> <br>
+          Decades of Trust.
+        </h1>
+
+        <p id="heroDescription" class="text-slate-200 text-base sm:text-lg leading-relaxed mb-8 font-light hero-subtext-shadow">
+          Founded by <strong>Sr. Advocate Binod Poddar</strong> (Former Advocate General, Jharkhand), Poddar & Associates provides authoritative legal representation and strategic counsel across the Supreme Court of India, State High Courts, and National Tribunals.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 mb-14">
+          <a id="heroCtaPrimary" href="#practices" class="gold-gradient-bg text-navy-950 font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider hover:brightness-110 shadow-xl transition-all flex items-center">
+            <span>Explore Practice Areas</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+          <a id="heroCtaSecondary" href="#consultation" class="px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider font-semibold text-white border border-gold/40 hover:bg-gold/10 transition-colors flex items-center backdrop-blur-sm">
+            <i data-lucide="file-text" class="w-4 h-4 mr-2 text-gold"></i>
+            <span>Instruct Counsel</span>
+          </a>
+        </div>
+
+        <!-- Credential Metrics Grid -->
+        <div id="heroMetricsContainer" class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-800/80">
+          <div>
+            <div class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white">55+</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-0.5">Years of Standing</div>
+          </div>
+          <div>
+            <div class="font-cinzel text-2xl sm:text-3xl font-extrabold text-gold">12,000+</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-0.5">Reported Matters</div>
+          </div>
+          <div>
+            <div class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white">25+</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-0.5">Senior Advocates & Bench</div>
+          </div>
+          <div>
+            <div class="font-cinzel text-2xl sm:text-3xl font-extrabold text-gold">100%</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-0.5">Bar Compliant</div>
+          </div>
+        </div>
+
+        <!-- Hero Carousel Dots Navigation -->
+        <div class="pt-8 flex items-center space-x-3">
+          <div class="text-[10px] uppercase font-mono tracking-widest text-gold-light font-semibold mr-1">Chambers Perspective:</div>
+          <div id="heroCarouselDots" class="flex items-center space-x-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. COURTS & TRIBUNALS TICKER / ACCREDITATION
+       ========================================================================= -->
+  <section class="py-5 bg-navy-900 border-b border-slate-800 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center space-x-6 text-xs uppercase tracking-widest text-slate-400 font-mono">
+        <span class="text-gold font-bold shrink-0 flex items-center">
+          <i data-lucide="landmark" class="w-4 h-4 mr-1.5"></i> Principal Forums:
+        </span>
+        <div id="courtsTickerContainer" class="flex flex-wrap items-center gap-x-6 gap-y-2 text-slate-300">
+          <span class="hover:text-gold transition-colors">Supreme Court of India</span>
+          <span class="text-gold/40">•</span>
+          <span class="hover:text-gold transition-colors">High Court of Jharkhand</span>
+          <span class="text-gold/40">•</span>
+          <span class="hover:text-gold transition-colors">National Company Law Tribunal (NCLT)</span>
+          <span class="text-gold/40">•</span>
+          <span class="hover:text-gold transition-colors">Income Tax Appellate Tribunal (ITAT)</span>
+          <span class="text-gold/40">•</span>
+          <span class="hover:text-gold transition-colors">Debt Recovery Tribunal (DRT)</span>
+          <span class="text-gold/40">•</span>
+          <span class="hover:text-gold transition-colors">Central Administrative Tribunal (CAT)</span>
+          <span class="text-gold/40">•</span>
+          <span class="hover:text-gold transition-colors">Mines Tribunal & NGT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. FIRM LEGACY & ABOUT SECTION
+       ========================================================================= -->
+  <section id="about" class="py-20 lg:py-28 relative border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left: Image & Badge Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="luxury-card rounded-2xl p-7 border-2 border-gold/30 relative">
+            <div id="aboutChambersCard" class="photo-overlay-card w-full h-80 rounded-xl border border-gold/30 flex flex-col justify-end p-6 relative overflow-hidden bg-cover bg-center shadow-inner">
+              <div class="relative z-10">
+                <span id="aboutCardTag" class="photo-tag text-xs uppercase tracking-widest font-bold text-gold px-2.5 py-1 rounded bg-navy-950/90 border border-gold/40 inline-block mb-2">
+                  Institutional History
+                </span>
+                <h3 id="aboutCardTitle" class="font-cinzel text-2xl font-bold !text-white mt-1">Founded by Senior Advocates</h3>
+                <p id="aboutCardSubtext" class="text-xs !text-slate-200 mt-1 font-mono">Mr. Binod Poddar & Mr. Biren Poddar</p>
+              </div>
+            </div>
+
+            <!-- Floating Seal Badge -->
+            <div class="seal-badge absolute -bottom-6 -right-4 z-30 bg-navy-950 border-2 border-gold p-4 rounded-xl shadow-2xl text-center">
+              <div id="aboutSealYear" class="seal-year font-cinzel text-3xl font-extrabold text-gold">1969</div>
+              <div id="aboutSealCity" class="seal-label text-[10px] uppercase font-bold tracking-widest text-slate-400">Founded In Ranchi</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Story & Pillars -->
+        <div class="lg:col-span-7">
+          <span id="aboutSubtitle" class="text-xs uppercase tracking-widest font-bold text-gold block mb-2">Heritage & Judicial Ethos</span>
+          <h2 id="aboutTitle" class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white mb-6 leading-snug">
+            Five Decades of Respected Standing at the Indian Bar
+          </h2>
+          <p id="aboutStoryP1" class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5 font-light">
+            <strong>Poddar & Associates (P&A)</strong> was established in 1969 by Senior Advocate Mr. Binod Poddar, who previously served as the <em>Advocate General</em> and <em>Additional Advocate General for the State of Jharkhand</em>. Commencing practice in 1967 and 1969 respectively, the founding partners built an institution anchored in rigorous jurisprudence and courtroom dignity.
+          </p>
+          <p id="aboutStoryP2" class="text-slate-400 text-sm leading-relaxed mb-8">
+            As a full-service law firm, we provide pragmatic, authoritative solutions to public sector enterprises, industrial corporations, commercial banks, and individuals. Our chambers combine veteran trial litigators with domain-specialist legal analysts.
+          </p>
+
+          <!-- Core Pillars Grid -->
+          <div id="aboutPillarsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-navy-900 border border-gold/20">
+              <div class="flex items-center space-x-3 mb-2">
+                <i data-lucide="scale" class="w-5 h-5 text-gold"></i>
+                <h4 class="font-cinzel text-sm font-bold text-white">Forensic Research</h4>
+              </div>
+              <p class="text-xs text-slate-400">Exhaustive statutory indexing and case precedent synthesis for robust trial pleadings.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-navy-900 border border-gold/20">
+              <div class="flex items-center space-x-3 mb-2">
+                <i data-lucide="shield-alert" class="w-5 h-5 text-gold"></i>
+                <h4 class="font-cinzel text-sm font-bold text-white">Trial-Ready Advocacy</h4>
+              </div>
+              <p class="text-xs text-slate-400">Decades of regular courtroom appearances before Division & Constitutional Benches.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-navy-900 border border-gold/20">
+              <div class="flex items-center space-x-3 mb-2">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-gold"></i>
+                <h4 class="font-cinzel text-sm font-bold text-white">Pragmatic Commercial Sense</h4>
+              </div>
+              <p class="text-xs text-slate-400">Aligning legal remedies with client business continuity, mitigating risk and project delays.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-navy-900 border border-gold/20">
+              <div class="flex items-center space-x-3 mb-2">
+                <i data-lucide="lock" class="w-5 h-5 text-gold"></i>
+                <h4 class="font-cinzel text-sm font-bold text-white">Strict Confidentiality</h4>
+              </div>
+              <p class="text-xs text-slate-400">Rigorous client privilege standards and ethical stewardship under Bar Council canons.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. CATEGORIZED PRACTICE AREAS (THE KEY VALUE ADD)
+       ========================================================================= -->
+  <section id="practices" class="py-20 lg:py-28 relative border-b border-slate-800 bg-navy-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span id="practiceSubtitle" class="text-xs uppercase tracking-widest font-bold text-gold block mb-2">Comprehensive Legal Services</span>
+          <h2 id="practiceTitle" class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">Practice Areas & Tribunals</h2>
+        </div>
+        <p id="practiceDesc" class="text-slate-400 text-sm max-w-md mt-3 md:mt-0">
+          Filter through our core competencies or search specifically for statutes, forums, or dispute subjects.
+        </p>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="space-y-4 mb-10">
+        <!-- Live Search Input -->
+        <div class="relative max-w-md">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+          <input type="text" id="practiceSearchInput" placeholder="Search by domain, statute (e.g. GST, MMDR, IBC)..." class="w-full bg-navy-900 border border-gold/25 rounded-xl pl-10 pr-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-gold transition-colors">
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-4 text-xs font-semibold">
+          <button class="practice-filter-btn active-filter-tab active px-4 py-2" data-category="all">
+            All Practices
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="tax-regulatory">
+            Taxation & GST
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="mining-industrial">
+            Mining & Industrial
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="dispute-arbitration">
+            Arbitration & Litigation
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="corporate-commercial">
+            Corporate & Tenders
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="banking-debt">
+            Banking & IBC
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="constitutional-service">
+            Service & CAT
+          </button>
+        </div>
+      </div>
+
+      <!-- Practice Cards Grid -->
+      <div id="practiceCardsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected dynamically via js/main.js and js/data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. PRACTICE SCOPE MODAL (DEEP DIVE)
+       ========================================================================= -->
+  <div id="practiceModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div id="practiceModalContent" class="modal-content luxury-card max-w-3xl w-full rounded-2xl border-2 border-gold/40 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <!-- Populated via openPracticeModal() -->
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       8. LEGAL BENCH / ATTORNEYS
+       ========================================================================= -->
+  <section id="attorneys" class="py-20 lg:py-28 relative border-b border-slate-800 bg-navy-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span id="teamSubtitle" class="text-xs uppercase tracking-widest font-bold text-gold block mb-2">Our Advocates & Partners</span>
+        <h2 id="teamTitle" class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">The Legal Bench</h2>
+        <p id="teamDesc" class="text-slate-400 text-sm mt-3">
+          Distinguished litigators, senior counsel, and regulatory advisors with extensive trial experience before High Courts and National Appellate Benches.
+        </p>
+      </div>
+
+      <!-- Attorneys Grid -->
+      <div id="attorneysContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected dynamically via js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. SECTORS & CLIENT INDUSTRIES
+       ========================================================================= -->
+  <section id="sectors" class="py-20 lg:py-28 relative border-b border-slate-800 bg-navy-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span id="sectorsSubtitle" class="text-xs uppercase tracking-widest font-bold text-gold block mb-2">Industry Experience</span>
+        <h2 id="sectorsTitle" class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">Key Sectors We Counsel</h2>
+        <p id="sectorsDesc" class="text-slate-400 text-sm mt-3">
+          Delivering strategic legal solutions tailored to the operational realities of India's foundational industries.
+        </p>
+      </div>
+
+      <div id="sectorsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Injected via js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. LEGAL INSIGHTS & CASE COMMENTARY
+       ========================================================================= -->
+  <section id="insights" class="py-20 lg:py-28 relative border-b border-slate-800 bg-navy-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+        <div>
+          <span id="insightsSubtitle" class="text-xs uppercase tracking-widest font-bold text-gold block mb-2">Thought Leadership</span>
+          <h2 id="insightsTitle" class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">Legal Commentary & Briefs</h2>
+        </div>
+        <p id="insightsDesc" class="text-slate-400 text-sm max-w-md mt-3 md:mt-0">
+          Regular analyses on landmark High Court rulings, statutory amendments, and commercial precedents.
+        </p>
+      </div>
+
+      <div id="insightsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Injected via js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. CONFIDENTIAL CONSULTATION / CASE ASSESSMENT FORM
+       ========================================================================= -->
+  <section id="consultation" class="py-20 lg:py-28 relative border-b border-slate-800 bg-navy-950">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="luxury-card rounded-2xl p-8 sm:p-12 border-2 border-gold/30 shadow-2xl relative">
+        <div class="max-w-2xl mb-8">
+          <span id="consultationSubtitle" class="text-xs uppercase tracking-widest font-bold text-gold block mb-2">Direct Chambers Communication</span>
+          <h2 id="consultationTitle" class="font-cinzel text-3xl font-extrabold text-white">Schedule Confidential Case Review</h2>
+          <p id="consultationDesc" class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+            All inquiries submitted through this form are treated as <strong>Strictly Privileged & Confidential</strong> legal communications directed to Senior Counsel (<span id="consultationEmailDisplay" class="firm-email-consult font-mono text-gold font-semibold">chambers@poddarandassociates.com</span>). Our chamber clerk will review your matter and respond within 24 business hours.
+          </p>
+        </div>
+
+        <!-- Success Alert Notification -->
+        <div id="formSuccessNotice" class="hidden mb-6 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs flex items-center">
+          <i data-lucide="check-circle" class="w-5 h-5 mr-2 shrink-0"></i>
+          <span id="formSuccessMessage">Your case review request has been logged successfully with our Chambers. A clerk will connect with you promptly.</span>
+        </div>
+
+        <form id="consultationForm" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-1.5" for="clientName">Full Name / Organization *</label>
+              <input type="text" id="clientName" required placeholder="e.g. Rajesh Singhania / Steel Pvt. Ltd." class="w-full bg-navy-900 border border-slate-700 focus:border-gold rounded-lg px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none transition-colors">
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-1.5" for="clientPhone">Contact Telephone *</label>
+              <input type="tel" id="clientPhone" required placeholder="+91 98765 43210" class="w-full bg-navy-900 border border-slate-700 focus:border-gold rounded-lg px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none transition-colors">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-1.5" for="clientEmail">Email Address</label>
+              <input type="email" id="clientEmail" placeholder="counsel@company.com" class="w-full bg-navy-900 border border-slate-700 focus:border-gold rounded-lg px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none transition-colors">
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-1.5" for="formPracticeDomain">Primary Domain of Dispute *</label>
+              <select id="formPracticeDomain" required class="w-full bg-navy-900 border border-slate-700 focus:border-gold rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none transition-colors">
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-semibold text-slate-300 mb-1.5" for="caseSummary">Summary of Matter & Desired Relief *</label>
+            <textarea id="caseSummary" rows="4" required placeholder="Please outline the nature of the dispute, current forum/court (if already filed), urgency, and relief sought..." class="w-full bg-navy-900 border border-slate-700 focus:border-gold rounded-lg p-4 text-xs text-white placeholder-slate-500 focus:outline-none transition-colors"></textarea>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+            <span id="consultationPrivilegeNotice" class="text-[11px] text-slate-400 flex items-center">
+              <i data-lucide="shield-check" class="w-4 h-4 text-gold mr-1.5 shrink-0"></i>
+              Attorney-Client privilege applies to all preliminary communications.
+            </span>
+            <button type="submit" class="w-full sm:w-auto gold-gradient-bg text-navy-950 font-bold px-8 py-3 rounded-lg text-xs uppercase tracking-wider hover:brightness-110 shadow-lg transition-all flex items-center justify-center">
+              <i data-lucide="send" class="w-4 h-4 mr-2"></i>
+              Submit Case Review
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       12. CHAMBERS & CONTACT LOCATIONS
+       ========================================================================= -->
+  <section id="contact" class="py-20 lg:py-28 relative border-b border-slate-800 bg-navy-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span id="locationsSubtitle" class="text-xs uppercase tracking-widest font-bold text-gold block mb-2">Chamber Locations</span>
+        <h2 id="locationsTitle" class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">Visit Our Chambers</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Ranchi Main Chambers -->
+        <div class="luxury-card rounded-2xl p-8 border border-gold-subtle">
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-navy-800 border border-gold/40 flex items-center justify-center text-gold">
+              <i data-lucide="building" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-widest font-semibold text-gold">Head Chambers</span>
+              <h3 class="font-cinzel text-xl font-bold text-white">Ranchi (High Court of Jharkhand)</h3>
+            </div>
+          </div>
+          <p id="ranchiAddressDisplay" class="firm-ranchi-address text-xs text-slate-300 leading-relaxed mb-5">
+            Poddar Chambers, Court Road, Near High Court of Jharkhand, Ranchi – 834001, Jharkhand, India.
+          </p>
+          <div class="space-y-2.5 text-xs text-slate-300 font-mono border-t border-slate-800 pt-4">
+            <div class="flex items-center">
+              <i data-lucide="phone" class="w-4 h-4 text-gold mr-2.5"></i>
+              <a href="tel:9525600001" class="firm-phone-primary hover:text-gold">+91 95256 00001</a> / <a href="tel:9431101716" class="firm-phone-secondary hover:text-gold">+91 94311 01716</a>
+            </div>
+            <div class="flex items-center">
+              <i data-lucide="mail" class="w-4 h-4 text-gold mr-2.5"></i>
+              <a href="mailto:chambers@poddarandassociates.com" class="firm-email-general hover:text-gold">chambers@poddarandassociates.com</a>
+            </div>
+            <div class="flex items-center">
+              <i data-lucide="clock" class="w-4 h-4 text-gold mr-2.5"></i>
+              <span class="firm-working-hours">Mon – Sat: 09:30 AM – 08:30 PM IST</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Delhi Supreme Court Chambers -->
+        <div class="luxury-card rounded-2xl p-8 border border-gold-subtle">
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-navy-800 border border-gold/40 flex items-center justify-center text-gold">
+              <i data-lucide="landmark" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-widest font-semibold text-gold">Appellate & Liaison Office</span>
+              <h3 class="font-cinzel text-xl font-bold text-white">New Delhi (Supreme Court of India)</h3>
+            </div>
+          </div>
+          <p id="delhiAddressDisplay" class="firm-delhi-address text-xs text-slate-300 leading-relaxed mb-5">
+            Supreme Court Bar Association Chambers, Tilak Marg, New Delhi – 110001. Specialized coordination for SLPs, Transfer Petitions & NCLAT Hearings.
+          </p>
+          <div class="space-y-2.5 text-xs text-slate-300 font-mono border-t border-slate-800 pt-4">
+            <div class="flex items-center">
+              <i data-lucide="phone" class="w-4 h-4 text-gold mr-2.5"></i>
+              <span class="firm-phone-primary">+91 95256 00001</span> (Chambers Coordinator)
+            </div>
+            <div class="flex items-center">
+              <i data-lucide="mail" class="w-4 h-4 text-gold mr-2.5"></i>
+              <a href="mailto:chambers@poddarandassociates.com" class="firm-email-general hover:text-gold">chambers@poddarandassociates.com</a>
+            </div>
+            <div class="flex items-center">
+              <i data-lucide="clock" class="w-4 h-4 text-gold mr-2.5"></i>
+              <span>Supreme Court Sitting Days: By Prior Appointment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       13. FOOTER & COMPLIANCE RE-TRIGGER
+       ========================================================================= -->
+  <footer class="bg-navy-950 text-slate-400 text-xs py-14 border-t border-slate-800 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="firm-short-name w-10 h-10 rounded-lg bg-navy-900 border border-gold flex items-center justify-center font-cinzel text-lg font-bold text-gold">
+              P&A
+            </div>
+            <span class="firm-name font-cinzel text-xl font-bold text-white tracking-wider">
+              PODDAR & ASSOCIATES
+            </span>
+          </div>
+          <p id="footerSummary" class="text-xs leading-relaxed max-w-md text-slate-400 mb-4">
+            Established in 1969. Premier full-service advocates and legal consultants specializing in Direct & Indirect Taxation, Commercial Arbitration, Mining Law, Tenders, Banking (IBC), and High Court Litigation.
+          </p>
+          <p id="footerCompliance" class="text-[11px] text-slate-500">
+            This site is maintained in strict conformity with the standards and ethics codified under the Advocates Act, 1961 and the Bar Council of India Rules.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-cinzel text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-gold transition-colors">Firm Legacy</a></li>
+            <li><a href="#practices" class="hover:text-gold transition-colors">Practice Areas</a></li>
+            <li><a href="#attorneys" class="hover:text-gold transition-colors">The Legal Bench</a></li>
+            <li><a href="#sectors" class="hover:text-gold transition-colors">Sectors & Industries</a></li>
+            <li><a href="#insights" class="hover:text-gold transition-colors">Legal Commentary</a></li>
+            <li><a href="#contact" class="hover:text-gold transition-colors">Chambers & Locations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-cinzel text-sm font-bold text-white uppercase tracking-wider mb-4">Compliance & Policies</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" id="openBciModalFooter" class="text-gold hover:underline">View BCI Disclaimer Modal</a></li>
+            <li><span class="text-slate-500">Privileged Attorney-Client Terms</span></li>
+            <li><span class="text-slate-500">Non-Solicitation Declaration</span></li>
+            <li><span class="text-slate-500">RERA & Tribunal Disclosures</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px]">
+        <p id="footerCopyright">© 2026 Poddar & Associates. All Judicial & Intellectual Rights Reserved.</p>
+        <p class="mt-2 sm:mt-0">Engineered as a Modern, Ultra-Fast Static Platform.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       14. FLOATING WHATSAPP & BACK TO TOP BUTTONS
+       ========================================================================= -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end space-y-3">
+    <!-- Back to top -->
+    <button id="backToTopBtn" class="opacity-0 pointer-events-none w-10 h-10 rounded-full bg-navy-900 border border-gold/40 text-gold shadow-lg flex items-center justify-center hover:bg-gold hover:text-navy-950 transition-all duration-300" aria-label="Back to Top">
+      <i data-lucide="chevron-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- WhatsApp Quick Desk -->
+    <a id="floatingWhatsappBtn" href="https://wa.me/919525600001?text=Hello%20Poddar%20%26%20Associates%20Chambers,%20I%20would%20like%20to%20inquire%20regarding%20a%20legal%20matter." target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn group flex items-center bg-[#25D366] text-white pl-4 pr-3 py-2.5 rounded-full shadow-2xl hover:brightness-105 transition-all">
+      <span class="text-xs font-bold mr-2 hidden sm:inline">Chambers Desk</span>
+      <i data-lucide="message-circle" class="w-5 h-5"></i>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

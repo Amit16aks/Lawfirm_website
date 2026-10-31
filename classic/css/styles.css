@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Classic Reference Stylesheet - Poddar & Associates
+   Faithful to the visual identity of poddarandassociates.com with modern polish
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --color-primary-navy: #1B355A;
+  --color-primary-maroon: #8B1E22;
+  --color-accent-gold: #C5A059;
+  --color-bg-light: #FFFFFF;
+  --color-bg-muted: #F8F9FA;
+  --color-border-light: #E5E7EB;
+  --color-text-dark: #222222;
+  --color-text-muted: #555555;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, .serif-font {
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+/* Classic Button Styles */
+.btn-classic-red {
+  background-color: #8B1E22;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.btn-classic-red:hover {
+  background-color: #6E161A;
+  color: #FFFFFF;
+}
+
+.btn-classic-navy {
+  background-color: #1B355A;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.btn-classic-navy:hover {
+  background-color: #12243D;
+  color: #FFFFFF;
+}
+
+/* Feature Box Styling (The 4 Signature Blocks) */
+.feature-box {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-top-width: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.feature-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Practice Area Checklist Items */
+.practice-item {
+  border-left: 3px solid #8B1E22;
+  background-color: #FDFDFD;
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+.practice-item:hover {
+  background-color: #F8FAFC;
+  padding-left: 1.25rem;
+  border-left-color: #1B355A;
+}
+
+/* Team Card */
+.team-card {
+  border: 1px solid #E5E7EB;
+  background: #FFFFFF;
+  transition: box-shadow 0.25s ease;
+}
+.team-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Client Logo Box */
+.client-box {
+  border: 1px solid #E5E7EB;
+  background: #FAFAFA;
+  transition: all 0.2s ease;
+}
+.client-box:hover {
+  background: #FFFFFF;
+  border-color: #8B1E22;
+}
+
+/* Disclaimer Modal Animation */
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.25s ease-out;
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.2s ease-in;
+}
+
+/* ==========================================================================
+   CLASSIC HERO CAROUSEL & KEN BURNS EFFECT
+   ========================================================================== */
+#heroCarouselBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slide img,
+.hero-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.0);
+  transition: transform 7s ease-out;
+  opacity: 0.95;
+  filter: contrast(1.08) brightness(0.92);
+}
+
+.hero-slide.active img,
+.hero-slide.active video {
+  transform: scale(1.06);
+}
+
+.hero-classic-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(15,23,42,0.76) 0%, rgba(15,23,42,0.50) 52%, rgba(15,23,42,0.22) 100%),
+              linear-gradient(180deg, rgba(15,23,42,0.15) 0%, rgba(15,23,42,0.55) 100%);
+}
+
+.hero-carousel-dot {
+  cursor: pointer;
+  height: 4px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.35);
+  border: none;
+  padding: 0;
+}
+
+.hero-carousel-dot.active {
+  width: 28px !important;
+  background-color: #DC2626 !important; /* Classic Crimson Red */
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}

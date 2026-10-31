@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #070D1B;
+  --color-secondary: #0E182E;
+  --color-surface: #142340;
+  --color-surface-hover: #1C2E52;
+  --color-gold: #C5A059;
+  --color-gold-light: #E0C78E;
+  --color-gold-dark: #9A7B38;
+  --color-gold-glow: rgba(197, 160, 89, 0.25);
+  --color-accent-blue: #2A4365;
+  --color-cream: #F8F6F0;
+  --color-text-muted: #94A3B8;
+  --color-border: rgba(197, 160, 89, 0.2);
+}
+
+/* Custom Typography Utility */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Luxury Gold & Navy Utilities */
+.bg-navy-950 {
+  background-color: #060B17;
+}
+
+.bg-navy-900 {
+  background-color: #0B1426;
+}
+
+.bg-navy-800 {
+  background-color: #101E38;
+}
+
+.bg-navy-700 {
+  background-color: #182C50;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F3E7C4 0%, #C5A059 50%, #9A7B38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg,
+.bg-gold-gradient-bg {
+  background: linear-gradient(135deg, #DFCA9B 0%, #C5A059 50%, #A37F38 100%) !important;
+}
+
+.gold-gradient-subtle {
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.15) 0%, rgba(197, 160, 89, 0.03) 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(197, 160, 89, 0.22);
+}
+
+.border-gold-glow {
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.18);
+}
+
+.luxury-card {
+  background: linear-gradient(180deg, rgba(16, 30, 56, 0.75) 0%, rgba(11, 20, 38, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(197, 160, 89, 0.5);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(197, 160, 89, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F4F8;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #060B17;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 4px;
+}
+
+/* Subtle Shimmer Animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, rgba(197, 160, 89, 0.1) 0%, rgba(197, 160, 89, 0.3) 50%, rgba(197, 160, 89, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 4s infinite linear;
+}
+
+/* Court ribbon animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth modal animations */
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.96) translateY(8px);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: all 0.3s ease-out;
+}
+.modal-exit {
+  opacity: 1;
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: all 0.2s ease-in;
+}
+
+/* ==========================================================================
+   DEFAULT LIGHT MODE THEME TOKENS
+   WCAG 2.1 AA Compliant Contrast System (Eliminates Font Invisibility)
+   ========================================================================== */
+html:not(.dark) body {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+}
+
+/* Base structural backgrounds */
+html:not(.dark) .bg-navy-950 {
+  background-color: #FFFFFF !important;
+}
+
+html:not(.dark) .bg-navy-900 {
+  background-color: #F8FAFC !important;
+}
+
+html:not(.dark) .bg-navy-800 {
+  background-color: #FFFFFF !important;
+}
+
+html:not(.dark) .bg-navy-700 {
+  background-color: #F1F5F9 !important;
+}
+
+/* Headings and primary titles */
+html:not(.dark) h1:not(#aboutChambersCard *):not(.photo-overlay-card *),
+html:not(.dark) h2:not(#aboutChambersCard *):not(.photo-overlay-card *),
+html:not(.dark) h3:not(#aboutChambersCard *):not(.photo-overlay-card *),
+html:not(.dark) h4:not(#aboutChambersCard *):not(.photo-overlay-card *),
+html:not(.dark) .font-cinzel:not(#aboutChambersCard *):not(.photo-overlay-card *):not(.seal-year) {
+  color: #0B132B !important; /* Deep Navy, 18:1 contrast on white */
+}
+
+/* Ensure text on light cards is razor sharp */
+html:not(.dark) .text-white:not(#aboutChambersCard *):not(.photo-overlay-card *):not(.gold-gradient-bg *):not([class*="bg-[#25D366]"] *):not(footer *):not(.badge-dark *) {
+  color: #0B132B !important;
+}
+
+html:not(.dark) p:not(#aboutChambersCard *):not(.photo-overlay-card *):not(footer *),
+html:not(.dark) .text-slate-100:not(#aboutChambersCard *):not(.photo-overlay-card *):not(footer *),
+html:not(.dark) .text-slate-200:not(#aboutChambersCard *):not(.photo-overlay-card *):not(footer *) {
+  color: #1E293B !important;
+}
+
+html:not(.dark) .text-slate-300:not(footer *):not([class*="bg-[#25D366]"] *) {
+  color: #334155 !important; /* 9.5:1 contrast */
+}
+
+html:not(.dark) .text-slate-400:not(footer *) {
+  color: #475569 !important; /* 7:1 contrast (WCAG AAA) */
+}
+
+html:not(.dark) .text-slate-500:not(footer *) {
+  color: #475569 !important;
+}
+
+html:not(.dark) .border-slate-800,
+html:not(.dark) .border-slate-700 {
+  border-color: #E2E8F0 !important;
+}
+
+/* ==========================================================================
+   GOLD COLOR FIX FOR LIGHT MODE
+   Replaces pale/invisible gold (#E0C78E) with rich, legible bronze gold (#8C6514)
+   ========================================================================== */
+html:not(.dark) .text-gold {
+  color: #8C6514 !important; /* 5.5:1 contrast ratio */
+}
+
+html:not(.dark) .text-gold-light {
+  color: #785408 !important; /* 6.8:1 contrast ratio */
+}
+
+html:not(.dark) .text-gold-gradient {
+  background: linear-gradient(135deg, #785408 0%, #A67C1E 50%, #5E4103 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* ==========================================================================
+   PRACTICE FILTER BUTTONS & ACTIVE TABS
+   Eliminates tab invisibility in both Dark and Light modes
+   ========================================================================== */
+.practice-filter-btn {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+/* Selected/Active Tab - Dark Mode & Default */
+.active-filter-tab,
+.practice-filter-btn.active,
+.practice-filter-btn.bg-gold-gradient-bg {
+  background: linear-gradient(135deg, #E5C98F 0%, #C5A059 50%, #A37F38 100%) !important;
+  color: #060B17 !important;
+  font-weight: 700 !important;
+  border: 1px solid #C5A059 !important;
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.3) !important;
+}
+
+/* Inactive Tab - Dark Mode & Default */
+.inactive-filter-tab,
+.practice-filter-btn:not(.active):not(.active-filter-tab):not(.bg-gold-gradient-bg) {
+  background-color: #0B1426 !important;
+  color: #CBD5E1 !important;
+  border: 1px solid #1E293B !important;
+  font-weight: 500 !important;
+}
+
+.inactive-filter-tab:hover,
+.practice-filter-btn:not(.active):not(.active-filter-tab):not(.bg-gold-gradient-bg):hover {
+  background-color: #132238 !important;
+  color: #E5C98F !important;
+  border-color: rgba(197, 160, 89, 0.5) !important;
+}
+
+/* Light Mode Active Tab */
+html:not(.dark) .active-filter-tab,
+html:not(.dark) .practice-filter-btn.active,
+html:not(.dark) .practice-filter-btn.bg-gold-gradient-bg {
+  background: linear-gradient(135deg, #E5C98F 0%, #C5A059 50%, #A37F38 100%) !important;
+  color: #060B17 !important;
+  font-weight: 700 !important;
+  border: 1px solid #B8860B !important;
+  box-shadow: 0 4px 14px rgba(184, 134, 11, 0.25) !important;
+}
+
+/* Light Mode Inactive Tab */
+html:not(.dark) .inactive-filter-tab,
+html:not(.dark) .practice-filter-btn:not(.active):not(.active-filter-tab):not(.bg-gold-gradient-bg) {
+  background-color: #F1F5F9 !important;
+  color: #334155 !important;
+  border: 1px solid #CBD5E1 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .inactive-filter-tab:hover,
+html:not(.dark) .practice-filter-btn:not(.active):not(.active-filter-tab):not(.bg-gold-gradient-bg):hover {
+  background-color: #E2E8F0 !important;
+  color: #785408 !important;
+  border-color: #C5A059 !important;
+}
+
+/* ==========================================================================
+   STATUTES PILLS & METRICS (High Contrast & Legibility)
+   Eliminates statute pill invisibility in Light Mode
+   ========================================================================== */
+.statute-label {
+  color: #94A3B8;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+html:not(.dark) .statute-label {
+  color: #334155 !important;
+  font-weight: 700 !important;
+}
+
+.statute-pill {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.25rem;
+  background-color: #060B17;
+  color: #E2E8F0;
+  border: 1px solid #1E293B;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+html:not(.dark) .statute-pill {
+  background-color: #F1F5F9 !important;
+  color: #0F172A !important;
+  border-color: #CBD5E1 !important;
+  font-weight: 600 !important;
+}
+
+.statute-more-badge {
+  font-size: 0.75rem;
+  color: #E5C98F;
+  font-weight: 600;
+  align-self: center;
+}
+html:not(.dark) .statute-more-badge {
+  color: #8C6514 !important;
+  font-weight: 700 !important;
+}
+
+/* Light mode utility translucent bg overrides */
+html:not(.dark) [class*="bg-navy-950/"],
+html:not(.dark) [class*="bg-navy-900/"],
+html:not(.dark) [class*="bg-navy-800/"] {
+  background-color: #F8FAFC !important;
+}
+
+html:not(.dark) .modal-bench-item {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #1E293B !important;
+}
+
+html:not(.dark) .attorney-card-footer {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* ==========================================================================
+   PHOTO OVERLAY CARDS (Permanent Crisp Legibility in All Themes)
+   Guarantees white & gold text over photographic backgrounds
+   ========================================================================== */
+.photo-overlay-card,
+#aboutChambersCard {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Subtle, lighter protective gradient over the image (keeps image bright & clear) */
+.photo-overlay-card::before,
+#aboutChambersCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6,11,23,0.0) 0%, rgba(6,11,23,0.15) 42%, rgba(6,11,23,0.78) 100%) !important;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Ensure text elements inside photo overlay cards are always layered above the gradient */
+.photo-overlay-card > div,
+#aboutChambersCard > div {
+  position: relative;
+  z-index: 2;
+}
+
+/* Headings inside photo overlay cards stay pure luminous white in ALL themes */
+#aboutChambersCard h3,
+.photo-overlay-card h3,
+html:not(.dark) #aboutChambersCard h3,
+html:not(.dark) .photo-overlay-card h3,
+html:not(.dark) #aboutChambersCard .font-cinzel,
+html:not(.dark) .photo-overlay-card .font-cinzel {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Paragraphs & subtext stay silver-white in ALL themes */
+#aboutChambersCard p,
+.photo-overlay-card p,
+html:not(.dark) #aboutChambersCard p,
+html:not(.dark) .photo-overlay-card p {
+  color: #E2E8F0 !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Tag pill inside photo overlay cards */
+.photo-tag,
+#aboutChambersCard .photo-tag,
+html:not(.dark) #aboutChambersCard .photo-tag,
+html:not(.dark) .photo-overlay-card .photo-tag {
+  background-color: rgba(6, 11, 23, 0.88) !important;
+  color: #E5C98F !important;
+  border: 1px solid rgba(197, 160, 89, 0.5) !important;
+  text-shadow: none !important;
+}
+
+/* Floating Seal Badge - Brought Forward in Front of Card */
+.seal-badge {
+  position: absolute;
+  z-index: 30 !important;
+  background-color: #060B17;
+  border: 2px solid #C5A059;
+  box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(197, 160, 89, 0.25) !important;
+}
+
+.seal-year,
+html:not(.dark) .seal-year {
+  color: #C5A059 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .seal-badge {
+  background-color: #FFFFFF !important;
+  border: 2px solid #C5A059 !important;
+  box-shadow: 0 15px 30px -5px rgba(11, 20, 38, 0.22) !important;
+}
+
+html:not(.dark) .seal-label {
+  color: #475569 !important;
+  font-weight: 700 !important;
+}
+
+/* Cards & Modals */
+html:not(.dark) .luxury-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-top: 3px solid #C5A059 !important;
+  box-shadow: 0 4px 20px -2px rgba(11, 20, 38, 0.06), 0 2px 4px -1px rgba(11, 20, 38, 0.03) !important;
+}
+
+html:not(.dark) .luxury-card:hover {
+  border-color: #B8860B !important;
+  box-shadow: 0 16px 32px -6px rgba(11, 20, 38, 0.12), 0 0 16px rgba(197, 160, 89, 0.25) !important;
+}
+
+/* Form Inputs */
+html:not(.dark) input,
+html:not(.dark) select,
+html:not(.dark) textarea {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #0F172A !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #64748B !important;
+}
+
+html:not(.dark) input:focus,
+html:not(.dark) select:focus,
+html:not(.dark) textarea:focus {
+  border-color: #8C6514 !important;
+  outline: none !important;
+}
+
+/* Modals */
+html:not(.dark) #bciModal > div,
+html:not(.dark) #practiceModalContent {
+  background-color: #FFFFFF !important;
+  border: 2px solid #C5A059 !important;
+  color: #0F172A !important;
+  box-shadow: 0 25px 50px -12px rgba(11, 20, 38, 0.3) !important;
+}
+
+/* Header & Nav in Light Mode */
+html:not(.dark) header {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+html:not(.dark) #mobileNav {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Ensure Floating WhatsApp Desk has crisp pure white text */
+.bg-\[\#25D366\],
+.bg-\[\#25D366\] * {
+  color: #FFFFFF !important;
+}
+
+/* Ensure Gold Action Button and Filter Tabs have crisp dark navy text */
+.gold-gradient-bg,
+.gold-gradient-bg *,
+.bg-gold-gradient-bg,
+.bg-gold-gradient-bg *,
+.active-filter-tab,
+.active-filter-tab * {
+  color: #0A1128 !important;
+}
+
+/* Anchored Dark Footer stays pure dark with luminous white/silver text */
+footer {
+  background-color: #080E1C !important;
+}
+footer,
+footer p,
+footer span,
+footer li,
+footer a {
+  color: #94A3B8 !important;
+}
+footer h4,
+footer .font-cinzel {
+  color: #FFFFFF !important;
+}
+footer a:hover {
+  color: #C5A059 !important;
+}
+footer .border-slate-800 {
+  border-color: #1A2640 !important;
+}
+
+/* ==========================================================================
+   HERO ROTATING MEDIA CAROUSEL & KEN BURNS EFFECT
+   Infinite rotation of images and background videos
+   ========================================================================== */
+#heroCarouselBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slide img,
+.hero-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.0);
+  transition: transform 7s ease-out;
+  opacity: 0.95;
+  filter: contrast(1.08) brightness(0.92);
+}
+
+.hero-slide.active img,
+.hero-slide.active video {
+  transform: scale(1.06);
+}
+
+/* Adaptive Contrast Scrim Overlay: rich photographic visibility with razor-sharp text legibility */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(6,11,23,0.78) 0%, rgba(6,11,23,0.52) 48%, rgba(6,11,23,0.20) 100%),
+              linear-gradient(180deg, rgba(6,11,23,0.15) 0%, rgba(6,11,23,0.58) 100%);
+}
+
+html:not(.dark) .hero-overlay {
+  background: linear-gradient(90deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0.32) 100%),
+              linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.7) 100%) !important;
+}
+
+html:not(.dark) .hero-slide img,
+html:not(.dark) .hero-slide video {
+  opacity: 0.9;
+  filter: contrast(1.05) brightness(1.0);
+}
+
+/* Typography shadows ensuring text pops vividly against vivid photographic backgrounds */
+.hero-title-shadow {
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtext-shadow {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+html:not(.dark) .hero-title-shadow {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+html:not(.dark) .hero-subtext-shadow {
+  text-shadow: none;
+}
+
+/* Carousel Indicators */
+.hero-carousel-dot {
+  cursor: pointer;
+  height: 4px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  background-color: rgba(148, 163, 184, 0.35);
+  border: none;
+  padding: 0;
+}
+
+.hero-carousel-dot.active {
+  width: 28px !important;
+  background-color: #C5A059 !important;
+  box-shadow: 0 0 10px rgba(197, 160, 89, 0.5);
+}
+
+html:not(.dark) .hero-carousel-dot.active {
+  background-color: #8C6514 !important;
+  box-shadow: 0 0 10px rgba(140, 101, 20, 0.4);
+}
+
+/* Print Styles for Corporate Counsels & Briefs */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+  }
+  .no-print, header, footer, #bciModal, #whatsappFloatingBtn, #themeToggleBtn {
+    display: none !important;
+  }
+  .luxury-card {
+    border: 1px solid #ccc !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #111 !important;
+  }
+  .text-gold-gradient {
+    -webkit-text-fill-color: #0b1426 !important;
+    color: #0b1426 !important;
+  }
+}

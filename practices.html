@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Areas & Tribunals | Poddar & Associates</title>
+  <meta name="description" content="Explore our specialized practice areas across Taxation, GST, Mining Law, Arbitration, Public Tenders, Banking (IBC), and High Court Litigation.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#C5A059',
+              light: '#E0C78E',
+              dark: '#9A7B38',
+            },
+            navy: {
+              950: '#060B17',
+              900: '#0B1426',
+              800: '#101E38',
+              700: '#182C50',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-gold selection:text-navy-950" data-page="practices">
+
+  <!-- BCI Modal -->
+  <div id="bciModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="modal-content luxury-card max-w-2xl w-full rounded-2xl p-6 sm:p-9 border-2 border-gold/40 shadow-2xl relative">
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-navy-900 border border-gold/40 flex items-center justify-center text-gold shadow-lg">
+          <i data-lucide="scale" class="w-8 h-8"></i>
+        </div>
+        <span id="bciModalSubtitle" class="text-xs font-semibold uppercase tracking-widest text-gold px-3 py-1 rounded bg-navy-950 border border-gold/30">
+          Statutory Compliance Notice
+        </span>
+        <h2 id="bciModalTitle" class="font-cinzel text-2xl sm:text-3xl font-bold text-white mt-3">Bar Council of India Disclaimer</h2>
+      </div>
+
+      <div id="bciModalBody" class="text-slate-300 text-xs sm:text-sm leading-relaxed space-y-3.5 max-h-[48vh] overflow-y-auto pr-2 border-y border-slate-800/80 py-4 font-light text-justify">
+        <p>
+          As per the norms set by the Bar Council of India, law firms are not authorized to solicit work and publicize. All the information, publications and legal commentary provided on <span class="text-gold font-mono">www.poddarandassociates.com</span> is for illustrative purposes only and should not be regarded or relied upon as legal advice. While the content provided is accurate as at the date of first publication, it is updated frequently when laws and regulations change.
+        </p>
+        <p>
+          The site clearly states it is not intended to be a source of advertising or solicitation, nor is it an invitation for a lawyer-client relationship, and transmission, receipt or use of the site does not constitute or create a lawyer-client relationship.
+        </p>
+        <p>
+          By clicking the “I Agree” button and retrieving information from the website, the user accepts that he/she is doing it out of free will and any reliance on the information contained on <span class="text-gold font-mono">www.poddarandassociates.com</span> is solely at the user's own risk. Specific legal advice should always be obtained before acting upon any information or commentary provided on the site. Further, the recipients of content from the site should not act, or refrain from acting, based upon any or all of the contents on the site.
+        </p>
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row items-center justify-end gap-3.5">
+        <button id="bciDeclineBtn" class="w-full sm:w-auto px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider font-semibold text-slate-400 hover:text-white border border-slate-700 transition-colors">
+          Decline & Exit
+        </button>
+        <button id="bciAcceptBtn" class="w-full sm:w-auto gold-gradient-bg text-navy-950 px-7 py-2.5 rounded-lg text-xs uppercase tracking-wider font-bold shadow-lg hover:brightness-110 transition-all flex items-center justify-center">
+          <i data-lucide="check" class="w-4 h-4 mr-1.5"></i>
+          I Agree
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="border-b border-gold/15 bg-navy-950/95 sticky top-0 z-40 backdrop-blur-md">
+    <div class="hidden lg:block border-b border-slate-800/60 text-xs py-2 px-6 text-slate-400 font-mono">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="flex items-center space-x-6">
+          <span class="flex items-center text-slate-300">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold mr-1.5"></i>
+            Bar Council Regd. | Chambers Established 1969
+          </span>
+          <span class="flex items-center">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold mr-1.5"></i>
+            High Court of Jharkhand & Supreme Court of India
+          </span>
+        </div>
+        <div class="flex items-center space-x-5">
+          <a href="tel:9525600001" class="hover:text-gold transition-colors flex items-center">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-gold mr-1.5"></i> +91 95256 00001
+          </a>
+          <span class="text-slate-700">|</span>
+          <a href="mailto:chambers@poddarandassociates.com" class="hover:text-gold transition-colors flex items-center">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-gold mr-1.5"></i> chambers@poddarandassociates.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-3.5 group">
+        <div class="w-12 h-12 rounded-xl bg-navy-900 border-2 border-gold flex items-center justify-center font-cinzel text-xl font-black text-gold shadow-md">
+          P&A
+        </div>
+        <div>
+          <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-white block">
+            PODDAR <span class="text-gold">&</span> ASSOCIATES
+          </span>
+          <span class="text-[10px] tracking-widest uppercase font-semibold text-slate-400 block -mt-1 font-mono">
+            Advocates & Legal Consultants • Estd. 1969
+          </span>
+        </div>
+      </a>
+
+      <div class="hidden xl:flex items-center space-x-8 text-sm font-medium">
+        <a href="index.html" class="text-slate-300 hover:text-gold transition-colors">Home</a>
+        <a href="about.html" class="text-slate-300 hover:text-gold transition-colors">Firm Legacy</a>
+        <a href="practices.html" class="text-gold font-semibold">Practice Areas</a>
+        <a href="team.html" class="text-slate-300 hover:text-gold transition-colors">Legal Bench</a>
+        <a href="index.html#sectors" class="text-slate-300 hover:text-gold transition-colors">Sectors</a>
+        <a href="index.html#insights" class="text-slate-300 hover:text-gold transition-colors">Insights</a>
+        <a href="contact.html" class="text-slate-300 hover:text-gold transition-colors">Chambers</a>
+      </div>
+
+      <!-- Action Button & Theme Switcher -->
+      <div class="flex items-center space-x-3">
+        <button id="themeToggleBtn" class="w-9 h-9 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-gold bg-navy-800 flex items-center justify-center transition-colors shadow-sm" title="Toggle Light / Dark Mode">
+          <i data-lucide="moon" class="w-4 h-4 text-slate-700"></i>
+        </button>
+
+        <a href="contact.html#consultation" class="hidden md:flex gold-gradient-bg text-navy-950 font-bold px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-md items-center">
+          <i data-lucide="shield" class="w-4 h-4 mr-1.5"></i>
+          Case Assessment
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-lg bg-navy-900 border border-gold/30 text-gold" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobileNav" class="xl:hidden hidden border-t border-slate-800 bg-navy-900/98 px-6 py-5 space-y-4">
+      <a href="index.html" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Home</a>
+      <a href="about.html" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Firm Legacy</a>
+      <a href="practices.html" class="mobile-nav-link block text-sm font-medium text-gold">Practice Areas</a>
+      <a href="team.html" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Legal Bench</a>
+      <a href="contact.html" class="mobile-nav-link block text-sm font-medium text-slate-200 hover:text-gold">Chambers & Locations</a>
+      <a href="contact.html#consultation" class="mobile-nav-link block text-center gold-gradient-bg text-navy-950 font-bold py-2.5 rounded-lg text-xs uppercase tracking-wider">
+        Case Assessment
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="py-16 lg:py-20 bg-navy-900 border-b border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-slate-400 font-mono mb-4">
+        <a href="index.html" class="hover:text-gold">Home</a>
+        <span>/</span>
+        <span class="text-gold">Practice Areas & Jurisdictions</span>
+      </div>
+      <h1 id="practicesPageHeroTitle" class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white leading-tight mb-4">
+        Comprehensive Legal Disciplines
+      </h1>
+      <p id="practicesPageHeroSub" class="text-slate-300 text-base max-w-3xl font-light leading-relaxed">
+        Our advocates combine deep domain specialization with rigorous trial advocacy across High Courts, the Supreme Court, and National Appellate Tribunals.
+      </p>
+    </div>
+  </section>
+
+  <!-- Practice Hub & Filter -->
+  <section class="py-20 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="space-y-5 mb-10">
+        <!-- Live Search -->
+        <div class="relative max-w-md">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+          <input type="text" id="practiceSearchInput" placeholder="Search by domain, statute (e.g. GST, MMDR, IBC)..." class="w-full bg-navy-900 border border-gold/25 rounded-xl pl-10 pr-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-gold transition-colors">
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-4 text-xs font-semibold">
+          <button class="practice-filter-btn active-filter-tab active px-4 py-2" data-category="all">
+            All Practices
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="tax-regulatory">
+            Taxation & GST
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="mining-industrial">
+            Mining & Industrial
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="dispute-arbitration">
+            Arbitration & Litigation
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="corporate-commercial">
+            Corporate & Tenders
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="banking-debt">
+            Banking & IBC
+          </button>
+          <button class="practice-filter-btn inactive-filter-tab px-4 py-2" data-category="constitutional-service">
+            Service & CAT
+          </button>
+        </div>
+      </div>
+
+      <!-- Practice Cards -->
+      <div id="practiceCardsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Detail Modal -->
+  <div id="practiceModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div id="practiceModalContent" class="modal-content luxury-card max-w-3xl w-full rounded-2xl border-2 border-gold/40 shadow-2xl relative max-h-[90vh] overflow-y-auto"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-navy-950 text-slate-400 text-xs py-14 border-t border-slate-800 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-navy-900 border border-gold flex items-center justify-center font-cinzel text-lg font-bold text-gold">
+              P&A
+            </div>
+            <span class="font-cinzel text-xl font-bold text-white tracking-wider">
+              PODDAR & ASSOCIATES
+            </span>
+          </div>
+          <p class="text-xs leading-relaxed max-w-md text-slate-400 mb-4">
+            Established in 1969. Premier full-service advocates and legal consultants in Ranchi, Jharkhand and New Delhi.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-cinzel text-sm font-bold text-white uppercase tracking-wider mb-4">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-gold transition-colors">Firm Legacy</a></li>
+            <li><a href="practices.html" class="text-gold font-semibold">Practice Areas</a></li>
+            <li><a href="team.html" class="hover:text-gold transition-colors">The Legal Bench</a></li>
+            <li><a href="contact.html" class="hover:text-gold transition-colors">Chambers & Locations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-cinzel text-sm font-bold text-white uppercase tracking-wider mb-4">Compliance</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" id="openBciModalFooter" class="text-gold hover:underline">View BCI Disclaimer Modal</a></li>
+            <li><span class="text-slate-500">Privileged Attorney-Client Terms</span></li>
+            <li><span class="text-slate-500">Non-Solicitation Declaration</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px]">
+        <p>© 2026 Poddar & Associates. All Judicial & Intellectual Rights Reserved.</p>
+        <p class="mt-2 sm:mt-0">Engineered as a Modern, Ultra-Fast Static Platform.</p>
+      </div>
+    </div>
+  <!-- Floating Buttons -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end space-y-3">
+    <button id="backToTopBtn" class="opacity-0 pointer-events-none w-10 h-10 rounded-full bg-navy-900 border border-gold/40 text-gold shadow-lg flex items-center justify-center hover:bg-gold hover:text-navy-950 transition-all duration-300" aria-label="Back to Top">
+      <i data-lucide="chevron-up" class="w-5 h-5"></i>
+    </button>
+    <a href="https://wa.me/919525600001?text=Hello%20Poddar%20%26%20Associates%20Chambers,%20I%20would%20like%20to%20inquire%20regarding%20a%20legal%20matter." target="_blank" rel="noopener noreferrer" class="group flex items-center bg-[#25D366] text-white pl-4 pr-3 py-2.5 rounded-full shadow-2xl hover:brightness-105 transition-all">
+      <span class="text-xs font-bold mr-2 hidden sm:inline">Chambers Desk</span>
+      <i data-lucide="message-circle" class="w-5 h-5"></i>
+    </a>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
