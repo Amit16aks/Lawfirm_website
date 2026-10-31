@@ -39,6 +39,7 @@ function initThemeToggle() {
   const storedTheme = localStorage.getItem("poddar_theme") || "light";
 
   updateThemeButton(storedTheme);
+  updateThemeLogo(storedTheme);
 
   if (!toggleBtn) return;
 
@@ -47,6 +48,7 @@ function initThemeToggle() {
     const newTheme = isDark ? "dark" : "light";
     localStorage.setItem("poddar_theme", newTheme);
     updateThemeButton(newTheme);
+    updateThemeLogo(newTheme);
     renderIcons();
   });
 }
@@ -61,6 +63,41 @@ function updateThemeButton(theme) {
     toggleBtn.innerHTML = `<i data-lucide="moon" class="w-4 h-4 text-slate-700"></i>`;
     toggleBtn.setAttribute("title", "Switch to Dark Luxury Mode");
   }
+}
+
+function updateThemeLogo(theme) {
+  const isDark = (theme === "dark") || document.documentElement.classList.contains("dark");
+  const media = (typeof FIRM_CONFIG !== "undefined" && FIRM_CONFIG.media) ? FIRM_CONFIG.media : {};
+  const logoUrl = isDark 
+    ? (media.firmLogoDarkUrl || "images/LOGO_3.png") 
+    : (media.firmLogoLightUrl || "images/LOGO_2.png");
+  const firmName = (typeof FIRM_CONFIG !== "undefined" && FIRM_CONFIG.name) ? FIRM_CONFIG.name : "Jain Kishore Associates";
+
+  document.querySelectorAll(".firm-logo-mark").forEach(el => {
+    let img = el.querySelector("img");
+    if (!img) {
+      img = document.createElement("img");
+      img.className = "w-full h-full object-contain";
+      el.innerHTML = "";
+      el.appendChild(img);
+    }
+    img.src = logoUrl;
+    img.alt = firmName;
+  });
+
+  // Footer logo always sits on dark navy background (bg-navy-950)
+  document.querySelectorAll(".firm-logo-footer").forEach(el => {
+    let img = el.querySelector("img");
+    const footerLogo = media.firmLogoDarkUrl || "images/LOGO_3.png";
+    if (!img) {
+      img = document.createElement("img");
+      img.className = "w-full h-full object-contain";
+      el.innerHTML = "";
+      el.appendChild(img);
+    }
+    img.src = footerLogo;
+    img.alt = firmName;
+  });
 }
 
 /* ==========================================================================
@@ -442,12 +479,8 @@ function bindMediaElements() {
     if (birenAdm) birenAdm.textContent = "Forums & Admissions: " + p2.courts;
   }
 
-  // 3. Custom Logo / Crest (if provided)
-  if (media.firmLogoUrl) {
-    document.querySelectorAll(".firm-logo-mark").forEach(el => {
-      el.innerHTML = `<img src="${media.firmLogoUrl}" alt="${FIRM_CONFIG.name}" class="w-full h-full object-contain">`;
-    });
-  }
+  // 3. Custom Logo / Crest (Dynamic Light / Dark mode logo)
+  updateThemeLogo();
 
   // 4. Custom Favicon (if provided)
   if (media.faviconUrl) {

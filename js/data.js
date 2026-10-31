@@ -341,14 +341,18 @@ const SITE_CONTENT = {
     partnerAkchanshKishoreImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
 
     /**
-     * FIELD: firmLogoUrl
+     * FIELD: firmLogoUrl / firmLogoLightUrl / firmLogoDarkUrl
      * -------------------------------------------------------------
-     * 📌 WHAT IT IS: File path or web URL for the main firm logo image.
-     *    Use "images/LOGO_2.png" for the primary stacked logo or "images/LOGO_1.png" for circular crest.
-     * ❓ WHAT TO ASK CLIENT: "Do you have your logo in transparent PNG format?" (Client provided LOGO_1, 2, 3!)
+     * 📌 WHAT IT IS: File paths for firm logos:
+     *    - firmLogoLightUrl: Used in Light Mode ("images/LOGO_2.png")
+     *    - firmLogoDarkUrl: Used in Dark Mode ("images/LOGO_3.png")
+     *    - firmLogoUrl: General fallback logo ("images/LOGO_2.png")
+     * ❓ WHAT TO ASK CLIENT: "Do you have your logo in transparent PNG format?" (Client provided LOGO_2 & LOGO_3!)
      * ⚠️ IF LEFT BLANK: Header renders high-end SVG crest with stylized typography.
      */
     firmLogoUrl: "images/LOGO_2.png",
+    firmLogoLightUrl: "images/LOGO_2.png",
+    firmLogoDarkUrl: "images/LOGO_3.png",
 
     /**
      * FIELD: faviconUrl

@@ -11,3 +11,6 @@ desktop.ini
 node_modules/
 *.log
 scratch/
+
+# Office temporary lock files
+~$*
