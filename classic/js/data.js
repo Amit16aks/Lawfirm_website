@@ -1,42 +1,32 @@
 /**
  * Centralized Firm Data Store - Classic Reference Variant
- * Clients can update all text, contacts, emails, practice areas, and team here.
+ * Configured with Jain Kishore Associates Official Data
  */
 
 const CLASSIC_FIRM_CONFIG = {
-  name: "Poddar & Associates",
-  tagline: "Law Firm in Ranchi, Jharkhand, India",
-  estYear: "1969",
-  foundedBy: "Sr. Advocate Mr. Binod Poddar & Sr. Advocate Mr. Biren Poddar",
+  name: "Jain Kishore Associates",
+  tagline: "Advocates & Legal Consultants • Ranchi | Jharkhand | India",
+  estYear: "2018",
+  foundedBy: "Advocate Mr. Hemant Jain & Advocate Mr. Akchansh Kishore",
 
   // Contact Details
-  phone1: "9525600001",
-  phone2: "9431101716",
-  emailGeneral: "chambers@poddarandassociates.com",
-  address: "Court Road, Near High Court of Jharkhand, Ranchi, Jharkhand, India",
-  delhiOffice: "Supreme Court Bar Association Chambers, New Delhi, India",
-  whatsappNumber: "919525600001",
+  phone1: "9472772994",
+  phone2: "7033619737",
+  emailGeneral: "hemant.nusrl@gmail.com",
+  address: "First Floor, H-143, Harmu Housing Colony, Beside Harmu Substation, Harmu, Ranchi, Jharkhand - 834002",
+  delhiOffice: "Appellate & Commercial Tribunals Liaison, New Delhi, India",
+  whatsappNumber: "919472772994",
 
-  /* =========================================================================
-   * 📧 CONSULTATION FORM & EMAIL NOTIFICATION SETTINGS
-   * Add the client's destination email here where case inquiries should arrive.
-   * ========================================================================= */
-  consultationNotificationEmail: "chambers@poddarandassociates.com", // <-- EDIT THIS!
-
-  // Form submission mode: "web3forms" | "formspree" | "mailto" | "whatsapp"
+  // Consultation Form Settings
+  consultationNotificationEmail: "hemant.nusrl@gmail.com",
   formSubmissionMode: "web3forms",
   web3formsAccessKey: "YOUR_WEB3FORMS_ACCESS_KEY_HERE",
   formspreeFormId: "",
 
   // Hero Banner Caption
-  heroHeadline: "Full-Service Law Firm Providing Pragmatic Legal Solutions",
-  heroSubtitle: "Comprising of experts, advisors, and litigators in diverse areas of law on a single unified platform.",
+  heroHeadline: "Strategic Courtroom Advocacy & Multi-Forum Commercial Dispute Resolution",
+  heroSubtitle: "Providing decisive legal representation across the High Court of Jharkhand, National Tribunals, and Arbitral Forums.",
 
-  /* =========================================================================
-   * 🖼️ COMPREHENSIVE MEDIA & PHOTOGRAPHY REPOSITORY
-   * Central control center for ALL photos, videos, logos, and avatars on the website.
-   * Add local paths (e.g. "images/about.jpg") or web image URLs.
-   * ========================================================================= */
   media: {
     heroSlides: [
       "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80",
@@ -45,7 +35,7 @@ const CLASSIC_FIRM_CONFIG = {
     ],
     heroSlideIntervalMs: 6000,
     aboutPreviewImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
-    firmLogoUrl: "" // Leave blank or add path e.g. "images/logo.png"
+    firmLogoUrl: "images/LOGO_2.png"
   },
 
   get heroMediaSlides() { return this.media.heroSlides; },
@@ -53,33 +43,33 @@ const CLASSIC_FIRM_CONFIG = {
   get aboutPreviewImage() { return this.media.aboutPreviewImage; },
 
   // About Preview on Homepage
-  aboutPreview: "Poddar & Associates (P&A) was founded in the year 1969 by Sr. Advocate Mr. Binod Poddar (Former Advocate General, State of Jharkhand and Former Additional Advocate General, State of Jharkhand) and Sr. Advocate Mr. Biren Poddar, who started their practice in the year 1967 and 1969 respectively. Poddar & Associates is a full-service law firm providing legal solutions in diverse areas of law. With a true professional approach and intricate understanding of the laws applicable to different industries and sectors, we provide the most pragmatic solutions to various organisations, both public and private as well as to individuals.",
+  aboutPreview: "Jain Kishore Associates is a litigation-focused law firm based in Ranchi, Jharkhand, providing strategic legal representation and advisory services to corporates, institutions, and individuals across India. The Firm is known for its strong courtroom advocacy, commercial dispute resolution, and sector-specific advisory, particularly in matters involving complex regulatory, financial, and infrastructure issues. We regularly appear before the Jharkhand High Court, various High Courts, District Courts, Tribunals, and arbitral forums.",
 
-  // The 4 Classic Feature Blocks (Exact matches to reference website)
+  // The 4 Classic Feature Blocks
   classicFeatures: [
     {
-      title: "Deadline Assistant",
-      desc: "We aim to achieve this goal through consistent efforts and attention in developing efficiently.",
-      icon: "clock",
-      badgeColor: "#991B1B" // Crimson/Red
+      title: "Courtroom Advocacy",
+      desc: "Regular appearances before the Jharkhand High Court, specialized benches, and arbitral tribunals.",
+      icon: "scale",
+      badgeColor: "#991B1B"
     },
     {
-      title: "Quick Info Center",
-      desc: "We are counsellors, advisors and confidants to some of the most successful entrepreneurs in Jharkhand.",
+      title: "Commercial Disputes",
+      desc: "Strategic dispute mitigation in high-value infrastructure, EPC, and commercial contract claims.",
       icon: "info",
-      badgeColor: "#1E3A8A" // Navy Blue
+      badgeColor: "#1E3A8A"
     },
     {
-      title: "Our Core Values",
-      desc: "Integrity, Humility and Kindness are the ways of life for Poddar & Associates and is imbibed by all its members.",
+      title: "Sectoral Advisory",
+      desc: "Nuanced regulatory guidance across energy, mining, banking, real estate, and manufacturing.",
       icon: "award",
-      badgeColor: "#B45309" // Amber Gold
+      badgeColor: "#B45309"
     },
     {
-      title: "Team Work",
-      desc: "They augment the firm’s expertise and abilities in handling work and issues having a multi-national impact.",
+      title: "Strict Confidentiality",
+      desc: "Uncompromising client privilege, ethical stewardship, and adherence to Bar Council canons.",
       icon: "users",
-      badgeColor: "#065F46" // Emerald Green
+      badgeColor: "#065F46"
     }
   ],
 
@@ -98,36 +88,36 @@ const CLASSIC_FIRM_CONFIG = {
 
   // Footer & Compliance
   footer: {
-    summary: "Established in 1969. Full-service law firm in Ranchi, Jharkhand and New Delhi providing legal solutions across Supreme Court, High Courts, and Tribunals.",
-    copyright: "© Copyrights Reserved To Poddar & Associates.",
-    designer: "Powered by :: Graphix Media (Modern Static Edition)"
+    summary: "Jain Kishore Associates is a litigation-focused law firm based in Ranchi, Jharkhand providing strategic representation across the High Court of Jharkhand, Commercial Courts, and National Tribunals.",
+    copyright: "© Copyrights Reserved To Jain Kishore Associates.",
+    designer: "Powered by :: Modern Static Edition"
   },
 
   // Subpage Details
   aboutPage: {
-    title: "About Poddar & Associates",
+    title: "About Jain Kishore Associates",
     paragraphs: [
-      "Poddar & Associates (P&A) was founded in the year 1969 by Sr. Advocate Mr. Binod Poddar (Former Advocate General, State of Jharkhand and Former Additional Advocate General, State of Jharkhand) and Sr. Advocate Mr. Biren Poddar, who started their practice in the year 1967 and 1969 respectively. Poddar & Associates is a full-service law firm providing legal solutions in diverse areas of law.",
-      "With a true professional approach and intricate understanding of the laws applicable to different industries and sectors, we provide the most pragmatic solutions to various organisations, both public and private as well as to individuals. Our aim is to provide best legal solution to our clients on a single platform of our firm, comprising of experts, advisors and litigators in various areas of law.",
-      "Over the last five decades, Poddar & Associates has established deep expertise before the Supreme Court of India, High Court of Jharkhand, National Company Law Tribunal (NCLT), Income Tax Appellate Tribunal (ITAT), Debt Recovery Tribunal (DRT), and specialized mining regulatory authorities."
+      "Jain Kishore Associates is a litigation-focused law firm based in Ranchi, Jharkhand, providing strategic legal representation and advisory services to corporates, institutions, and individuals across India.",
+      "The Firm is known for its strong courtroom advocacy, commercial dispute resolution, and sector-specific advisory, particularly in matters involving complex regulatory, financial, and infrastructure issues. We regularly appear before the Jharkhand High Court, various High Courts, District Courts, Tribunals, and arbitral forums.",
+      "Our partners possess extensive experience handling high-stakes arbitrations, insolvency proceedings before NCLT/NCLAT, banking recovery before DRT/DRAT, and regulatory disputes in power, mining, and real estate."
     ],
-    pillarsHeading: "Core Pillars of Poddar & Associates"
+    pillarsHeading: "Core Pillars of Jain Kishore Associates"
   },
 
   servicePage: {
-    heading: "Our Services & Legal Practice Areas",
+    heading: "Our Practice Areas & Legal Services",
     subtitle: "Full-spectrum advocacy, corporate advisory, and dispute resolution across all judicial forums."
   },
 
   teamPage: {
-    heading: "Our Team of Advocates & Counsel",
-    subtitle: "Senior counsel, managing partners, and associates dedicated to forensic legal precision."
+    heading: "Our Partners & Advocates",
+    subtitle: "Litigation-focused advocates dedicated to forensic legal precision and courtroom advocacy."
   },
 
   contactPage: {
     heading: "Contact Chambers",
-    ranchiOfficeTitle: "Ranchi Head Chambers",
-    delhiOfficeTitle: "Supreme Court Liaison Office"
+    ranchiOfficeTitle: "Harmu Principal Chambers",
+    delhiOfficeTitle: "Appellate & Commercial Liaison"
   }
 };
 
@@ -135,122 +125,71 @@ const CLASSIC_FIRM_CONFIG = {
 const CLASSIC_PRACTICE_DATA = {
   mainServices: [
     {
-      title: "LEGAL CONSULTANCY",
-      desc: "Comprehensive advisory on statutory compliance, risk assessment, and corporate governance for organizations and individuals."
+      title: "COMMERCIAL & CIVIL LITIGATION",
+      desc: "Strategic representation in commercial suits, contractual claims, injunctions, and civil appeals before High Courts and District Courts."
     },
     {
-      title: "COURT APPEARANCE",
-      desc: "Regular appearances and vigorous trial advocacy before the Supreme Court of India, High Court of Jharkhand, and National Benches."
+      title: "ARBITRATION (DOMESTIC & INTERNATIONAL)",
+      desc: "Institutional and ad-hoc arbitrations, Section 9 interim relief, and award enforcement in turnkey infrastructure disputes."
     },
     {
-      title: "DRAFTING INCLUDING CONVEYANCE, NOTICES & DOCUMENTATION",
-      desc: "Meticulous preparation of writ petitions, plaints, commercial contracts, conveyance deeds, statutory notices, and arbitral claims."
+      title: "INSOLVENCY & BANKING RECOVERY (IBC / DRT)",
+      desc: "Representation of financial & operational creditors, corporate debtors before NCLT, NCLAT, and DRT/DRAT."
     }
   ],
   casesRelatedTo: [
-    "TAX MATTERS [SALES TAX, INCOME TAX, CENTRAL EXCISE, VALUE ADDED TAX (VAT), JHARKHAND EXCISE, ENTRY TAX, SERVICE TAX, GST]",
-    "TENDER MATTER",
-    "INDUSTRIAL LAW CONSULTANCY",
-    "MINING MATTER",
-    "REAL ESTATE CONSULTANCY AND DOCUMENTATION",
-    "ARBITRATION MATTER",
-    "CONTRACT MATTERS",
-    "THE COMPANIES ACT",
-    "LABOUR LAWS",
-    "PARTNERSHIP ACT",
-    "RECOVERY OF DEBTS DUE TO BANKS AND FINANCIAL INSTITUTIONS (DRT / SARFAESI)",
-    "CENTRAL EXCISE",
-    "MATRIMONIAL DISPUTES",
-    "BANKING CASES",
-    "CIVIL CASES",
-    "CRIMINAL CASES",
-    "FACTORIES ACT, EMPLOYEES’ PROVIDENT FUND MISCELLANEOUS PROVISIONS",
-    "EMPLOYEES STATE INSURANCE ACT, 1948",
-    "SERVICE MATTER",
-    "CONSUMER PROTECTION ACT"
+    "COMMERCIAL & CIVIL LITIGATION",
+    "DOMESTIC & INTERNATIONAL ARBITRATION",
+    "INSOLVENCY & BANKRUPTCY CODE (IBC)",
+    "BANKING, FINANCE & DEBT RECOVERY (DRT / DRAT)",
+    "DIRECT & INDIRECT TAXATION (INCOME TAX, GST)",
+    "REAL ESTATE & INFRASTRUCTURE DISPUTES",
+    "ENERGY & POWER SECTOR REGULATION",
+    "MINING LAW & MINERAL CONCESSIONS",
+    "CORPORATE & COMMERCIAL ADVISORY",
+    "REGULATORY, WHITE-COLLAR & ENVIRONMENTAL COMPLIANCE",
+    "CONSTITUTIONAL WRIT PETITIONS",
+    "PUBLIC PROCUREMENT & TENDER DISPUTES"
   ],
   tribunals: [
-    "CASES RELATING TO EDUCATIONAL TRIBUNAL",
-    "CASES RELATING TO CENTRAL ADMINISTRATIVE TRIBUNAL (CAT)",
+    "HIGH COURT OF JHARKHAND",
+    "NATIONAL COMPANY LAW TRIBUNAL (NCLT)",
+    "NATIONAL COMPANY LAW APPELLATE TRIBUNAL (NCLAT)",
+    "DEBT RECOVERY TRIBUNAL (DRT / DRAT)",
     "INCOME TAX APPELLATE TRIBUNAL (ITAT)",
-    "COMMERCIAL TAXES TRIBUNAL",
-    "DEBT RECOVERY TRIBUNAL (DRT)"
+    "NATIONAL GREEN TRIBUNAL (NGT)"
   ]
 };
 
-// Team Members (Exact roster from reference website)
+// Team Members (Partners from docx)
 const CLASSIC_TEAM = [
   {
-    name: "Biren Poddar",
-    role: "Senior Advocate & Co-Founder",
-    exp: "Practice Since 1969",
-    specialty: "Commercial Law, Company Disputes & High Court Litigation",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+    name: "Hemant Jain",
+    role: "Partner | Advocate, Jharkhand High Court",
+    exp: "Litigation & Regulatory Specialist",
+    specialty: "Taxation, Arbitration, Real Estate, Mining & Environmental Law",
+    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=400&q=80"
   },
   {
-    name: "Vikas Pandey",
-    role: "Advocate",
-    exp: "16+ Years Experience",
-    specialty: "Civil & Criminal Trial Practice",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80"
-  },
-  {
-    name: "Deepak Sinha",
-    role: "Advocate",
-    exp: "15+ Years Experience",
-    specialty: "Service Matters & Central Administrative Tribunal",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80"
-  },
-  {
-    name: "Piyush Poddar",
-    role: "Managing Partner",
-    exp: "24+ Years Experience",
-    specialty: "Arbitration, Tenders & Supreme Court Practice",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
-  },
-  {
-    name: "Janak Mishra",
-    role: "Advocate",
-    exp: "12+ Years Experience",
-    specialty: "Labour, Factories & Industrial Dispute Law",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
-  },
-  {
-    name: "Alpana Burman",
-    role: "Advocate",
-    exp: "10+ Years Experience",
-    specialty: "Consumer Protection, Conveyance & Civil Litigation",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
-  },
-  {
-    name: "Rakhi Sharma",
-    role: "Advocate",
-    exp: "10+ Years Experience",
-    specialty: "Matrimonial Disputes & Family Law",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80"
-  },
-  {
-    name: "Manav Poddar",
-    role: "Partner",
-    exp: "18+ Years Experience",
-    specialty: "Direct Tax, GST & Commercial Taxes Tribunal",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80"
-  },
-  {
-    name: "Diksha Dwivedi",
-    role: "Associate Advocate",
-    exp: "Legal Associate",
-    specialty: "Statutory Documentation, Research & Legal Drafting",
-    image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=300&q=80"
+    name: "Akchansh Kishore",
+    role: "Partner | Advocate, Jharkhand High Court",
+    exp: "Commercial Litigation Specialist",
+    specialty: "Arbitration, Insolvency (IBC), Energy, Infrastructure & Banking",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
   }
 ];
 
-// Client Sectors & Leading Client Logos
+// Representative Clients from docx
 const CLASSIC_CLIENTS = [
-  { name: "Public Sector Undertakings (PSUs)", type: "Government & Statutory Bodies" },
-  { name: "Mining & Mineral Leaseholders", type: "Coal, Iron Ore & Bauxite" },
-  { name: "Integrated Steel Manufacturers", type: "Industrial Plants & Heavy Rolling" },
-  { name: "Scheduled Commercial Banks", type: "Banking & Financial Institutions" },
-  { name: "Infrastructure Developers", type: "Highways & Energy Concessions" },
-  { name: "Commercial Real Estate Promoters", type: "Townships & Commercial Complexes" }
+  { name: "Damodar Valley Corporation (DVC)", type: "Power Turnkey Project Arbitration" },
+  { name: "DLF Home Developers Limited", type: "Commercial Suits & Turnkey Power Projects" },
+  { name: "Dalmia Cement (Bharat) Limited", type: "Commercial Injunction Suits" },
+  { name: "Adani Electricity", type: "Power Project Disputes & Land Acquisition" },
+  { name: "NACOF (National Farmers' Cooperative)", type: "High Court Writ Jurisdiction" },
+  { name: "IndiaMART InterMESH Limited", type: "Corporate Criminal Litigation Defense" },
+  { name: "Prabhatam Buildwell Pvt Limited", type: "Securitization & Financial Restructuring" },
+  { name: "Urmila International Pvt Ltd", type: "Tender Disputes & State Policy Challenge" },
+  { name: "JKM Engineers Pvt Ltd", type: "Civil Turnkey Project Arbitration" },
+  { name: "Leading Latvian Energy Company", type: "International Commercial Negotiations" },
+  { name: "State Electricity Corporation", type: "Arbitration & Insolvency Proceedings" }
 ];

@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAttorneys();
   initLegalInsights();
   initSectors();
+  initRepresentativeClients();
   initConsultationForm();
   initBackToTop();
   renderIcons();
@@ -403,19 +404,42 @@ function bindMediaElements() {
     }
   }
 
-  // 2. Founders' Portraits in about.html
+  // 2. Partners' Portraits & Bios in about.html
+  const p1 = (typeof ATTORNEYS !== "undefined" && ATTORNEYS[0]) ? ATTORNEYS[0] : null;
+  const p2 = (typeof ATTORNEYS !== "undefined" && ATTORNEYS[1]) ? ATTORNEYS[1] : null;
+
   const binodImg = document.getElementById("founderBinodAvatar");
-  if (binodImg) {
-    const binodLawyer = ATTORNEYS.find(a => a.id === "binod-poddar");
-    const binodSrc = media.founderBinodPoddarImage || (binodLawyer && binodLawyer.avatar);
-    if (binodSrc) binodImg.src = binodSrc;
+  const binodName = document.getElementById("founderBinodName");
+  const binodRole = document.getElementById("founderBinodRole");
+  const binodBio = document.getElementById("founderBinodBio");
+  const binodAdm = document.getElementById("founderBinodAdmissions");
+
+  if (p1) {
+    if (binodImg) {
+      binodImg.src = media.partnerHemantJainImage || p1.avatar;
+      binodImg.alt = p1.name;
+    }
+    if (binodName) binodName.textContent = p1.name;
+    if (binodRole) binodRole.textContent = p1.role;
+    if (binodBio) binodBio.textContent = p1.description;
+    if (binodAdm) binodAdm.textContent = "Forums & Admissions: " + p1.courts;
   }
 
   const birenImg = document.getElementById("founderBirenAvatar");
-  if (birenImg) {
-    const birenLawyer = ATTORNEYS.find(a => a.id === "biren-poddar");
-    const birenSrc = media.founderBirenPoddarImage || (birenLawyer && birenLawyer.avatar);
-    if (birenSrc) birenImg.src = birenSrc;
+  const birenName = document.getElementById("founderBirenName");
+  const birenRole = document.getElementById("founderBirenRole");
+  const birenBio = document.getElementById("founderBirenBio");
+  const birenAdm = document.getElementById("founderBirenAdmissions");
+
+  if (p2) {
+    if (birenImg) {
+      birenImg.src = media.partnerAkchanshKishoreImage || p2.avatar;
+      birenImg.alt = p2.name;
+    }
+    if (birenName) birenName.textContent = p2.name;
+    if (birenRole) birenRole.textContent = p2.role;
+    if (birenBio) birenBio.textContent = p2.description;
+    if (birenAdm) birenAdm.textContent = "Forums & Admissions: " + p2.courts;
   }
 
   // 3. Custom Logo / Crest (if provided)
@@ -1024,6 +1048,27 @@ function initSectors() {
       <div>
         <h4 class="font-cinzel text-base font-bold text-white mb-1">${sector.name}</h4>
         <p class="text-xs text-slate-400 leading-relaxed">${sector.desc}</p>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* ==========================================================================
+   7.1. Representative Clients & Matters Render (From Client Dossier)
+   ========================================================================== */
+function initRepresentativeClients() {
+  const container = document.getElementById("representativeClientsContainer");
+  if (!container || typeof REPRESENTATIVE_CLIENTS === "undefined") return;
+
+  container.innerHTML = REPRESENTATIVE_CLIENTS.map(item => `
+    <div class="luxury-card rounded-xl p-5 border border-gold/15 hover:border-gold/40 transition-all flex flex-col justify-between group">
+      <div>
+        <div class="flex items-center justify-between mb-2.5">
+          <span class="text-[10px] font-mono text-gold uppercase tracking-wider px-2 py-0.5 rounded bg-gold/10 border border-gold/25 font-semibold">${item.category}</span>
+          <i data-lucide="shield-check" class="w-4 h-4 text-gold/70 group-hover:text-gold transition-colors"></i>
+        </div>
+        <h4 class="font-cinzel text-sm font-bold text-white mb-1.5 group-hover:text-gold transition-colors">${item.name}</h4>
+        <p class="text-xs text-slate-300 font-light leading-relaxed">${item.matter}</p>
       </div>
     </div>
   `).join("");

@@ -1,0 +1,45 @@
+Sheet Section,Item / Field Name,Current Pre-Filled Value (From Docx Profile),Client Input / New Value (Fill Here),Priority Status,Detailed Instructions & Website Location
+Firm Identity,Official Firm Name,Jain Kishore Associates,,MANDATORY,"Appears in top navbar, footer, copyright, and SEO meta tags."
+Firm Identity,Firm Short Name / Acronym,JKA,,RECOMMENDED,Used on mobile views and compact badges.
+Firm Identity,Professional Subtitle,Advocates & Legal Consultants,,RECOMMENDED,Displayed below logo across all headers.
+Firm Identity,Firm Tagline / Philosophy,Trial Readiness. Commercial Pragmatism. Uncompromising Integrity.,,OPTIONAL,Main slogan on homepage hero section.
+Firm Identity,Year of Inception,2018 (Expanded Chambers),,RECOMMENDED,Shows on 'About the Firm' timeline.
+Contact & Chambers,Complete Office Address,"First Floor, H-143, Harmu Housing Colony, Beside Harmu Substation, Harmu, Ranchi, Jharkhand - 834002",,MANDATORY,"Shows on top bar, footer, contact page, and schema.org."
+Contact & Chambers,Google Maps URL,Pending link,,RECOMMENDED,Users clicking 'Get Directions' will open this Google Maps link.
+Contact & Chambers,Office Working Hours,Monday – Saturday: 09:30 AM – 08:30 PM (Sunday: By Appointment),,RECOMMENDED,Shows on Contact page.
+Contact & Chambers,Primary Phone / Mobile,+91 94727 72994,,MANDATORY,Direct call button connects to this number.
+Contact & Chambers,Secondary Phone / Mobile,+91 70336 19737,,RECOMMENDED,Second partner helpline.
+Contact & Chambers,WhatsApp Chat Number,+91 94727 72994,,RECOMMENDED,WhatsApp floating button triggers direct chat.
+Contact & Chambers,Official Contact Email,hemant.nusrl@gmail.com,,MANDATORY,Online consultation requests are directed to this email.
+Contact & Chambers,Secondary Official Email,akchanshkishore@gmail.com,,RECOMMENDED,Partner email.
+Contact & Chambers,Custom Domain Name,Currently live at amit16aks.github.io/Lawfirm_website/,,RECOMMENDED,e.g. www.jainkishoreassociates.com (if purchased or desired).
+Partner 1,Hemant Jain - Full Name,Hemant Jain,,MANDATORY,Partner card heading.
+Partner 1,Hemant Jain - Role,"Partner | Advocate, Jharkhand High Court",,MANDATORY,Professional title.
+Partner 1,Hemant Jain - Qualifications,"B.A. LL.B. (NUSRL) | Advocate, High Court of Jharkhand",,RECOMMENDED,Academic & Bar qualifications.
+Partner 1,Hemant Jain - Bar Enrolment No.,Please provide (e.g. JH/XXX/20XX),,RECOMMENDED,Bar Council enrolment number.
+Partner 1,Hemant Jain - Practice Courts,"High Court of Jharkhand, Supreme Court of India, Statutory Tribunals & District Courts",,RECOMMENDED,Courts of regular appearance.
+Partner 1,Hemant Jain - Email & Phone,hemant.nusrl@gmail.com | +91 94727 72994,,MANDATORY,Partner direct contacts.
+Partner 1,Hemant Jain - Professional Bio,"Litigation-focused advocate with substantial experience in handling commercial and regulatory disputes. Practice spans taxation, arbitration, real estate, mining, and environmental law, with extensive experience representing corporate and institutional clients before High Courts and statutory forums. Prior experience of practicing in New Delhi.",,MANDATORY,Full biography on About and Team pages.
+Partner 1,Hemant Jain - Photo,High-res portrait headshot needed,,MANDATORY,Upload photo or share Google Drive link.
+Partner 2,Akchansh Kishore - Full Name,Akchansh Kishore,,MANDATORY,Partner card heading.
+Partner 2,Akchansh Kishore - Role,"Partner | Advocate, Jharkhand High Court",,MANDATORY,Professional title.
+Partner 2,Akchansh Kishore - Qualifications,"B.A. LL.B. | Advocate, High Court of Jharkhand",,RECOMMENDED,Academic & Bar qualifications.
+Partner 2,Akchansh Kishore - Bar Enrolment No.,Please provide (e.g. JH/XXX/20XX),,RECOMMENDED,Bar Council enrolment number.
+Partner 2,Akchansh Kishore - Practice Courts,"High Court of Jharkhand, NCLT, NCLAT New Delhi, DRT, DRAT & Commercial Courts",,RECOMMENDED,Courts of regular appearance.
+Partner 2,Akchansh Kishore - Email & Phone,akchanshkishore@gmail.com | +91 70336 19737,,MANDATORY,Partner direct contacts.
+Partner 2,Akchansh Kishore - Professional Bio,"Akchansh Kishore focuses on commercial litigation, arbitration, and insolvency matters, with sectoral expertise in energy, infrastructure, banking & finance, and FMCG. He regularly appears before High Courts and specialized tribunals including NCLT, NCLAT, DRT, and DRAT. He has also advised domestic and international clients in high-value infrastructure disputes and cross-border commercial negotiations.",,MANDATORY,Full biography on About and Team pages.
+Partner 2,Akchansh Kishore - Photo,High-res portrait headshot needed,,MANDATORY,Upload photo or share Google Drive link.
+Representative Clients,Damodar Valley Corporation (DVC),Arbitration in power turnkey project disputes,,CONFIRM,Confirm if name can be shown on website (BCI Rule 36 compliance).
+Representative Clients,DLF Home Developers Limited,"Commercial suits, electricity turnkey projects & PF litigation",,CONFIRM,Confirm if name can be shown on website.
+Representative Clients,Dalmia Cement (Bharat) Limited,Commercial suits for civil injunctions,,CONFIRM,Confirm if name can be shown on website.
+Representative Clients,Adani Electricity,Power project disputes & land acquisition advisory,,CONFIRM,Confirm if name can be shown on website.
+Representative Clients,NACOF (National Farmers' Cooperative),Writ jurisdiction for dues before Jharkhand High Court,,CONFIRM,Confirm if name can be shown on website.
+Representative Clients,IndiaMART InterMESH Limited,Corporate criminal litigation defense,,CONFIRM,Confirm if name can be shown on website.
+Representative Clients,Prabhatam Buildwell Pvt Limited,"Securitization, debt recovery & financial restructuring",,CONFIRM,Confirm if name can be shown on website.
+Representative Clients,Urmila International Pvt Ltd,Tender disputes & Jharkhand State Liquor Policy challenge,,CONFIRM,Confirm if name can be shown on website.
+Representative Clients,JKM Engineers Pvt Ltd,Arbitration in civil turnkey projects,,CONFIRM,Confirm if name can be shown on website.
+Representative Clients,Leading Latvian Energy Company,Cross-border international commercial negotiations,,CONFIRM,Confirm if name can be shown on website.
+Representative Clients,State Electricity Corporation,Multiple arbitrations & insolvency proceedings,,CONFIRM,Confirm if name can be shown on website.
+Visual Assets,Official Firm Logo Files,Using temporary typography crest,,MANDATORY,Transparent PNG / SVG vector logo of Jain Kishore Associates.
+Visual Assets,Office / Chamber Interior Photos,Using architectural stock photos,,OPTIONAL,"Real photos of your Ranchi office, library, or meeting room."
+Visual Assets,Downloadable PDF Firm Profile,Using docx content,,RECOMMENDED,Compiled PDF brochure for visitors who click 'Download Firm Profile'.
